@@ -15,6 +15,7 @@ _This application will allow the user to add/view volunteers and corresponding p
 * _Open folder in Virtual Studio Code (or your text editor of choice)_
 * _Open your terminal in Virtual Studio Code & type code . this will open all files associated with this app. 
 * _Before you initialize GIT, be sure to delete the already exisiting .git file by running this command in your terminal $rm -rf .git_
+*_Open Postgres and set up databases volunteer_tracker and volunteer_tracker_test with projects and volunteer tables._
 * _Create your own repository and push new changes to GitHub_
 
 ## Behavior Driven Development 
