@@ -1,15 +1,19 @@
-<h1>Community Projects for kids: Welcome Volunteers!</h1>
-
-<h3>Available Projects</h3>
-
-<% if @projects.any? %>
-  <ul>
-    <% @projects.each do |project| %>
-      <li><a href="/projects/<%=project.id%>"><%= project.title %></a></li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>There are currently no projects happening.</p>
-<% end %>
-
+<h1>Salem's Lot Community Uplift Projects </h1>
+<h2>For boils and Ghouls</h2>
+<div class="panel panel-default">
+ <div class="panel-heading">
+  <h3>Available Projects</h3>
+</div>
+<div class="panel-body">
+  <% if @projects.any? %>
+    <ul>
+      <% @projects.each do |project| %>
+        <li><a href="/projects/<%=project.id%>"><%= project.title %></a></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are currently no projects happening.</p>
+  <% end %>
+</div>
+</div>
 <a href="/projects/new">Add a new project</a>

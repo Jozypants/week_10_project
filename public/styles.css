@@ -1,0 +1,53 @@
+.box {
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  padding: 50px;
+  border-radius: 8px;
+  background-color: mintcream;
+}
+
+body {
+   background-color: lightslategray;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Chelsea Market', cursive;
+}
+
+h2 {
+  text-align: center;
+  font-family: 'Chelsea Market', cursive;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Chelsea Market', cursive;
+}
+
+
+footer {
+  text-align: center;
+  font-family: monospace;
+}
+
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: slateblue;;
+}
+
+/* mouse over link */
+a:hover {
+  color: black;
+}
+
+/* selected link */
+a:active {
+  color: slateblue;
+}
