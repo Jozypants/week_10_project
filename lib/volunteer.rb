@@ -7,4 +7,6 @@ class Volunteer
     @project_id = attributes.fetch(:project_id)
     @id = attributes.fetch(:id)
   end
+
+  
 end
