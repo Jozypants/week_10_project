@@ -92,16 +92,16 @@ describe Project do
     end
   end
 
-  describe('#volunteers') do
-    it("returns a project's volunteers") do
-      project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
-      project.save
-      volunteer1 = Volunteer.new({:name => 'Jane', :project_id => 1, :id => nil})
-      volunteer1.save
-      volunteer2 = Volunteer.new({:name => 'Joe', :project_id => 1, :id => nil})
-      volunteer2.save
-      expect(project.volunteers).to(eq([volunteer1, volunteer2]))
-    end
-  end
+  # describe('#volunteers') do
+  #   it("returns a project's volunteers") do
+  #     project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+  #     project.save
+  #     volunteer1 = Volunteer.new({:name => 'Jane', :project_id => 1, :id => nil})
+  #     volunteer1.save
+  #     volunteer2 = Volunteer.new({:name => 'Joe', :project_id => 1, :id => nil})
+  #     volunteer2.save
+  #     expect(project.volunteers).to(eq([volunteer1, volunteer2]))
+  #   end
+  # end
 
 end
