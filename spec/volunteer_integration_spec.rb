@@ -16,7 +16,6 @@ describe('the project creation path', {:type => :feature}) do
   end
 end
 
-
 describe('the project update path', {:type => :feature}) do
   it('allows a user to change the name of the project') do
     test_project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
@@ -54,5 +53,19 @@ describe('the volunteer detail page path', {:type => :feature}) do
     fill_in('name', :with => 'Jane')
     click_button('Update volunteer')
     expect(page).to have_content('Jane')
+  end
+end
+
+describe('the volunteer delete path', {:type => :feature}) do
+  it('allows a user to delete a volunteer') do
+    test_project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
+    test_project.save
+    project_id = test_project.id.to_i
+    test_volunteer = Volunteer.new({:name => 'Jasmine', :project_id => project_id, :id => nil})
+    test_volunteer.save
+    visit "/projects/#{project_id}"
+    click_link('Jasmine')
+    click_button('Delete project')
+    expect(page).not_to have_content("Jasmine")
   end
 end
