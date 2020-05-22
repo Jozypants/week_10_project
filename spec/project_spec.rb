@@ -1,6 +1,7 @@
 require "spec_helper"
 
 describe Project do
+
   describe '#title' do
     it 'returns the project title' do
       project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
@@ -91,5 +92,16 @@ describe Project do
       expect(Project.all).to eq []
     end
   end
+
+  # describe('#delete') do
+  #   it("deletes all volunteers belonging to a deleted project") do
+  #     project = Project.new({:title => "Macrame 101", :id => nil})
+  #     project.save()
+  #     volunteer = Volunteer.new({:name => "Nancy", :project_id => project.id, :id => nil})
+  #     volunteer.save()
+  #     project.delete()
+  #     expect(Volunteer.find(volunteer.id)).to(eq(nil))
+  #   end
+  # end
 
 end
