@@ -11,9 +11,9 @@ _This application will allow the user to add/view volunteers and corresponding p
 ## Setup/Installation Requirements
 
 * _View this Repository Here on Heroku: (https://still-waters-18148.herokuapp.com/)_
-* _Clone Repository from GitHub : https://github.com/Jozypants/week_10_project.git
+* _Clone Repository from GitHub : https://github.com/Jozypants/week_10_project.git_
 * _Open folder in Virtual Studio Code (or your text editor of choice)_
-* _Open your terminal in Virtual Studio Code & type code . this will open all files associated with this app. 
+* _Open your terminal in Virtual Studio Code & type code . this will open all files associated with this app._ 
 * _Before you initialize GIT, be sure to delete the already exisiting .git file by running this command in your terminal $rm -rf .git_
 * _Open Postgres and set up databases volunteer_tracker and volunteer_tracker_test (from TEMPLATE) with projects and volunteer tables._
 * _Create your own repository and push new changes to GitHub_
@@ -34,7 +34,7 @@ _This application will allow the user to add/view volunteers and corresponding p
 
 ## Known Bugs
 
-_No known bugs at this time_
+_Heroku will not deploy._
 
 ## Support and contact details
 
