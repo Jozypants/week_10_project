@@ -2,6 +2,11 @@ require "spec_helper"
 
 describe Volunteer do
 
+  before(:each) do
+     @project = Project.new({:title => 'Teaching Kids to Code', :id => nil, })
+    @project.save()
+  end
+
 
   describe('#name')do
     it('returns the name of the volunteer') do
@@ -77,13 +82,21 @@ describe Volunteer do
 
     describe('.find_by_project') do
     it("finds volunteers for a project") do
-      project2 = Project.new({:title => 'Teaching Kids to Code', :id => nil, })
+      project2 = Project.new({:title => 'Teaching Ruby to Kids', :id => nil})
       project2.save
-      volunteer1 = Volunteer.new({:name => 'Jane', :project_id => 1, :id => nil})
+      volunteer1 = Volunteer.new({:name => 'Jane', :project_id => project2.id, :id => nil})
       volunteer1.save
-      volunteer2 = Volunteer.new({:name => 'Joe', :project_id => 1, :id => nil})
+      volunteer2 = Volunteer.new({:name => 'Joe', :project_id => @project.id , :id => nil})
       volunteer2.save
-      expect(Volunteer.find_by_project(project2.id)).to(eq([project2]))
+      expect(Volunteer.find_by_project(project2.id)).to(eq([volunteer1]))
+    end
+  end
+
+  describe('#project') do
+    it("finds the project a volunteer belongs to") do
+      volunteer2 = Volunteer.new({:name => 'Joe', :project_id => @project.id , :id => nil})
+      volunteer2.save
+      expect(volunteer2.project()).to(eq(@project))
     end
   end
 
