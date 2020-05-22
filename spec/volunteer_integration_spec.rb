@@ -1,10 +1,10 @@
-require "capybara/rspec"
-require "./app"
-require "pry"
-require('spec_helper')
+# require "capybara/rspec"
+# require "./app"
+# require "pry"
+# require('spec_helper')
 
-Capybara.app = Sinatra::Application
-set(:show_exceptions, false)
+# Capybara.app = Sinatra::Application
+# set(:show_exceptions, false)
 
 # Your project should be set up so that a volunteer can only be created if a project already exists. (This makes it easier to assign the one to many relationship in Sinatra.) Focus on getting one integration spec passing at a time.
 
@@ -63,4 +63,4 @@ set(:show_exceptions, false)
 #     click_button('Update Volunteer')
 #     expect(page).to have_content('Jane')
 #   end
-end
+# end
